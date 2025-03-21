@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Cliente</title>
+    <style>
+        
+        div{
+        
+            padding: 10px; /*espaçamento*/
+            background-color: #f6f6f6; /*cor*/
+            overflow:hidden; /*espaçamento de uma linha quando o*/
+        }
+
+        input [type ="text"], [type ="text"], select{
+            font: 17px calibri; /*tamanho da fonte e a fonte da letra*/
+            width: 50%; /*largura*/
+            padding: 12px; /*espaçamento*/
+            border: 1px solid #ce0e0e; /*largura da borda e cor*/
+            border-radius: 15px; /*contorno de borda*/
+        }
+        
+        input[type ="button"]{
+            font: 17px calibri;
+            width:auto; /*largura do botao*/
+            float: right; /*onde o botao fica*/
+            cursor: pointer;
+            padding: 7px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div> <!--divisão de tela-->
+       
+        <div>
+        <input type="text" id="txtNome" placeholder="Cliente">
+        </div>
+        
+            <div>
+            <input type="text" id="txtIdade" placeholder="Idade Cliente">
+            </div>
+                
+                <div>
+                <input  type="text" id="txtEmail" placeholder="Email Cliente"> <!--place holder é um pré texto que fica na caixa de mensagem -->
+                </div>
+                    <select id="SelPais"> <!--seleção de itens-->
+                    <option selected="">selecione seu Pais</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="USA">USA</option>
+                </select>
+                <div>
+                    <input type="button" value="Salvar" onclick="savefile()">
+                </div>
+    </div>
+    <script>
+        function savefile ()
+        {
+            
+            //pegando variaveis 
+            
+            var nome = document.getElementById('txtNome').value;
+             var idade = document.getElementById('txtIdade').value;
+             var email = document.getElementById('txtEmail').value;
+             var pais = document.getElementById('SelPais').value;
+
+             var Data = 
+            
+            'as informações abaixo estão corretas?\r Nome: ' + nome + '\r\n' +
+            'Idade: ' + idade + '\r\n' +
+            'Email: ' + email + '\r\n' +
+            'pais ' + pais + '\r\n'; 
+                confirm(Data);
+        }
+    
+    </script>
+</body>
+</html>
